@@ -1,0 +1,449 @@
+root@otssTestServer:/home/lx/git/otus-linux# vagrant up
+Bringing machine 'otuslinux' up with 'virtualbox' provider...
+==> otuslinux: Importing base box 'centos/7'...
+==> otuslinux: Matching MAC address for NAT networking...
+==> otuslinux: Checking if box 'centos/7' version '2004.01' is up to date...
+==> otuslinux: Setting the name of the VM: otus-linux_otuslinux_1621767298842_83551
+==> otuslinux: Clearing any previously set network interfaces...
+==> otuslinux: Preparing network interfaces based on configuration...
+    otuslinux: Adapter 1: nat
+    otuslinux: Adapter 2: hostonly
+==> otuslinux: Forwarding ports...
+    otuslinux: 22 (guest) => 2222 (host) (adapter 1)
+==> otuslinux: Running 'pre-boot' VM customizations...
+==> otuslinux: Booting VM...
+==> otuslinux: Waiting for machine to boot. This may take a few minutes...
+    otuslinux: SSH address: 127.0.0.1:2222
+    otuslinux: SSH username: vagrant
+    otuslinux: SSH auth method: private key
+    otuslinux:
+    otuslinux: Vagrant insecure key detected. Vagrant will automatically replace
+    otuslinux: this with a newly generated keypair for better security.
+    otuslinux:
+    otuslinux: Inserting generated public key within guest...
+    otuslinux: Removing insecure key from the guest if it's present...
+    otuslinux: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> otuslinux: Machine booted and ready!
+==> otuslinux: Checking for guest additions in VM...
+    otuslinux: No guest additions were detected on the base box for this VM! Guest
+    otuslinux: additions are required for forwarded ports, shared folders, host only
+    otuslinux: networking, and more. If SSH fails on this machine, please install
+    otuslinux: the guest additions and repackage the box to continue.
+    otuslinux:
+    otuslinux: This is not an error message; everything may continue to work properly,
+    otuslinux: in which case you may ignore this message.
+==> otuslinux: Setting hostname...
+==> otuslinux: Configuring and enabling network interfaces...
+==> otuslinux: Rsyncing folder: /home/lx/git/otus-linux/ => /vagrant
+==> otuslinux: Running provisioner: shell...
+    otuslinux: Running: inline script
+    otuslinux: Loaded plugins: fastestmirror
+    otuslinux: Determining fastest mirrors
+    otuslinux:  * base: ftp.nsc.ru
+    otuslinux:  * extras: mirrors.datahouse.ru
+    otuslinux:  * updates: ftp.nsc.ru
+    otuslinux: Resolving Dependencies
+    otuslinux: --> Running transaction check
+    otuslinux: ---> Package gdisk.x86_64 0:0.8.10-3.el7 will be installed
+    otuslinux: ---> Package hdparm.x86_64 0:9.43-5.el7 will be installed
+    otuslinux: ---> Package mdadm.x86_64 0:4.1-7.el7_9 will be installed
+    otuslinux: --> Processing Dependency: libreport-filesystem for package: mdadm-4.1-7.el7_9.x86_64
+    otuslinux: ---> Package smartmontools.x86_64 1:7.0-2.el7 will be installed
+    otuslinux: --> Processing Dependency: mailx for package: 1:smartmontools-7.0-2.el7.x86_64
+    otuslinux: --> Running transaction check
+    otuslinux: ---> Package libreport-filesystem.x86_64 0:2.1.11-53.el7.centos will be installed
+    otuslinux: ---> Package mailx.x86_64 0:12.5-19.el7 will be installed
+    otuslinux: --> Finished Dependency Resolution
+    otuslinux:
+    otuslinux: Dependencies Resolved
+    otuslinux:
+    otuslinux: ================================================================================
+    otuslinux:  Package                  Arch       Version                  Repository   Size
+    otuslinux: ================================================================================
+    otuslinux: Installing:
+    otuslinux:  gdisk                    x86_64     0.8.10-3.el7             base        190 k
+    otuslinux:  hdparm                   x86_64     9.43-5.el7               base         83 k
+    otuslinux:  mdadm                    x86_64     4.1-7.el7_9              updates     440 k
+    otuslinux:  smartmontools            x86_64     1:7.0-2.el7              base        546 k
+    otuslinux: Installing for dependencies:
+    otuslinux:  libreport-filesystem     x86_64     2.1.11-53.el7.centos     base         41 k
+    otuslinux:  mailx                    x86_64     12.5-19.el7              base        245 k
+    otuslinux:
+    otuslinux: Transaction Summary
+    otuslinux: ================================================================================
+    otuslinux: Install  4 Packages (+2 Dependent packages)
+    otuslinux:
+    otuslinux: Total download size: 1.5 M
+    otuslinux: Installed size: 4.3 M
+    otuslinux: Downloading packages:
+    otuslinux: Public key for hdparm-9.43-5.el7.x86_64.rpm is not installed
+    otuslinux: warning: /var/cache/yum/x86_64/7/base/packages/hdparm-9.43-5.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID f4a80eb5: NOKEY
+    otuslinux: Public key for mdadm-4.1-7.el7_9.x86_64.rpm is not installed
+    otuslinux: --------------------------------------------------------------------------------
+    otuslinux: Total                                              1.6 MB/s | 1.5 MB  00:00
+    otuslinux: Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+    otuslinux: Importing GPG key 0xF4A80EB5:
+    otuslinux:  Userid     : "CentOS-7 Key (CentOS 7 Official Signing Key) <security@centos.org>"
+    otuslinux:  Fingerprint: 6341 ab27 53d7 8a78 a7c2 7bb1 24c6 a8a7 f4a8 0eb5
+    otuslinux:  Package    : centos-release-7-8.2003.0.el7.centos.x86_64 (@anaconda)
+    otuslinux:  From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+    otuslinux: Running transaction check
+    otuslinux: Running transaction test
+    otuslinux: Transaction test succeeded
+    otuslinux: Running transaction
+    otuslinux:   Installing : libreport-filesystem-2.1.11-53.el7.centos.x86_64             1/6
+    otuslinux:
+    otuslinux:   Installing : mailx-12.5-19.el7.x86_64                                     2/6
+    otuslinux:
+    otuslinux:   Installing : 1:smartmontools-7.0-2.el7.x86_64                             3/6
+    otuslinux:
+    otuslinux:   Installing : mdadm-4.1-7.el7_9.x86_64                                     4/6
+    otuslinux:
+    otuslinux:   Installing : hdparm-9.43-5.el7.x86_64                                     5/6
+    otuslinux:
+    otuslinux:   Installing : gdisk-0.8.10-3.el7.x86_64                                    6/6
+    otuslinux:
+    otuslinux:   Verifying  : 1:smartmontools-7.0-2.el7.x86_64                             1/6
+    otuslinux:
+    otuslinux:   Verifying  : mdadm-4.1-7.el7_9.x86_64                                     2/6
+    otuslinux:
+    otuslinux:   Verifying  : gdisk-0.8.10-3.el7.x86_64                                    3/6
+    otuslinux:
+    otuslinux:   Verifying  : mailx-12.5-19.el7.x86_64                                     4/6
+    otuslinux:
+    otuslinux:   Verifying  : hdparm-9.43-5.el7.x86_64                                     5/6
+    otuslinux:
+    otuslinux:   Verifying  : libreport-filesystem-2.1.11-53.el7.centos.x86_64             6/6
+    otuslinux:
+    otuslinux:
+    otuslinux: Installed:
+    otuslinux:   gdisk.x86_64 0:0.8.10-3.el7          hdparm.x86_64 0:9.43-5.el7
+    otuslinux:   mdadm.x86_64 0:4.1-7.el7_9           smartmontools.x86_64 1:7.0-2.el7
+    otuslinux:
+    otuslinux: Dependency Installed:
+    otuslinux:   libreport-filesystem.x86_64 0:2.1.11-53.el7.centos mailx.x86_64 0:12.5-19.el7
+    otuslinux:
+    otuslinux: Complete!
+==> otuslinux: Running provisioner: shell...
+    otuslinux: Running: /tmp/vagrant-shell20210523-21393-yj4krf.sh
+    otuslinux: mdadm: Unrecognised md component device - /dev/sdb
+    otuslinux: mdadm: Unrecognised md component device - /dev/sdc
+    otuslinux: mdadm: Unrecognised md component device - /dev/sdd
+    otuslinux: mdadm: Unrecognised md component device - /dev/sde
+    otuslinux: mdadm: Unrecognised md component device - /dev/sdf
+    otuslinux: mdadm: layout defaults to left-symmetric
+    otuslinux: mdadm: layout defaults to left-symmetric
+    otuslinux: mdadm: chunk size defaults to 512K
+    otuslinux: mdadm: size set to 253952K
+    otuslinux: mdadm: Defaulting to version 1.2 metadata
+    otuslinux: mdadm: array /dev/md0 started.
+    otuslinux: Personalities : [raid6] [raid5] [raid4]
+    otuslinux: md0 : active raid6 sdf[4] sde[3] sdd[2] sdc[1] sdb[0]
+    otuslinux:       761856 blocks super 1.2 level 6, 512k chunk, algorithm 2 [5/5] [UUUUU]
+    otuslinux:       [>....................]  resync =  0.6% (1920/253952) finish=2.1min speed=1920K/sec
+    otuslinux:
+    otuslinux: unused devices: <none>
+    otuslinux: /dev/md0:
+    otuslinux:            Version : 1.2
+    otuslinux:      Creation Time : Sun May 23 10:56:28 2021
+    otuslinux:         Raid Level : raid6
+    otuslinux:         Array Size : 761856 (744.00 MiB 780.14 MB)
+    otuslinux:      Used Dev Size : 253952 (248.00 MiB 260.05 MB)
+    otuslinux:       Raid Devices : 5
+    otuslinux:      Total Devices : 5
+    otuslinux:        Persistence : Superblock is persistent
+    otuslinux:
+    otuslinux:        Update Time : Sun May 23 10:56:28 2021
+    otuslinux:              State : clean, resyncing
+    otuslinux:     Active Devices : 5
+    otuslinux:    Working Devices : 5
+    otuslinux:     Failed Devices : 0
+    otuslinux:      Spare Devices : 0
+    otuslinux:
+    otuslinux:             Layout : left-symmetric
+    otuslinux:         Chunk Size : 512K
+    otuslinux:
+    otuslinux: Consistency Policy : resync
+    otuslinux:
+    otuslinux:      Resync Status : 0% complete
+    otuslinux:
+    otuslinux:               Name : otuslinux:0  (local to host otuslinux)
+    otuslinux:               UUID : d3aa3589:8cd807b4:9cbf999a:9c0f3d64
+    otuslinux:             Events : 0
+    otuslinux:
+    otuslinux:     Number   Major   Minor   RaidDevice State
+    otuslinux:        0       8       16        0      active sync   /dev/sdb
+    otuslinux:        1       8       32        1      active sync   /dev/sdc
+    otuslinux:        2       8       48        2      active sync   /dev/sdd
+    otuslinux:        3       8       64        3      active sync   /dev/sde
+    otuslinux:        4       8       80        4      active sync   /dev/sdf
+    otuslinux: ARRAY /dev/md0 level=raid6 num-devices=5 metadata=1.2 name=otuslinux:0 UUID=d3aa3589:8cd807b4:9cbf999a:9c0f3d64
+    otuslinux:    devices=/dev/sdb,/dev/sdc,/dev/sdd,/dev/sde,/dev/sdf
+    otuslinux: cat /etc/mdadm/mdadm.conf
+    otuslinux: DEVICE partitions
+    otuslinux: ARRAY /dev/md0 level=raid6 num-devices=5 metadata=1.2 name=otuslinux:0 UUID=d3aa3589:8cd807b4:9cbf999a:9c0f3d64
+    otuslinux: mdadm: set /dev/sde faulty in /dev/md0
+    otuslinux: cat /proc/mdstat
+    otuslinux: Personalities : [raid6] [raid5] [raid4]
+    otuslinux: md0 : active raid6 sdf[4] sde[3](F) sdd[2] sdc[1] sdb[0]
+    otuslinux:       761856 blocks super 1.2 level 6, 512k chunk, algorithm 2 [5/4] [UUU_U]
+    otuslinux:       [>....................]  resync =  0.6% (1920/253952) finish=2.1min speed=1920K/sec
+    otuslinux:
+    otuslinux: unused devices: <none>
+    otuslinux: mdadm -D /dev/md0
+    otuslinux: /dev/md0:
+    otuslinux:            Version : 1.2
+    otuslinux:      Creation Time : Sun May 23 10:56:28 2021
+    otuslinux:         Raid Level : raid6
+    otuslinux:         Array Size : 761856 (744.00 MiB 780.14 MB)
+    otuslinux:      Used Dev Size : 253952 (248.00 MiB 260.05 MB)
+    otuslinux:       Raid Devices : 5
+    otuslinux:      Total Devices : 5
+    otuslinux:        Persistence : Superblock is persistent
+    otuslinux:
+    otuslinux:        Update Time : Sun May 23 10:56:30 2021
+    otuslinux:              State : clean, degraded, resyncing
+    otuslinux:     Active Devices : 4
+    otuslinux:    Working Devices : 4
+    otuslinux:     Failed Devices : 1
+    otuslinux:      Spare Devices : 0
+    otuslinux:
+    otuslinux:             Layout : left-symmetric
+    otuslinux:         Chunk Size : 512K
+    otuslinux:
+    otuslinux: Consistency Policy : resync
+    otuslinux:
+    otuslinux:      Resync Status : 0% complete
+    otuslinux:
+    otuslinux:               Name : otuslinux:0  (local to host otuslinux)
+    otuslinux:               UUID : d3aa3589:8cd807b4:9cbf999a:9c0f3d64
+    otuslinux:             Events : 1
+    otuslinux:
+    otuslinux:     Number   Major   Minor   RaidDevice State
+    otuslinux:        0       8       16        0      active sync   /dev/sdb
+    otuslinux:        1       8       32        1      active sync   /dev/sdc
+    otuslinux:        2       8       48        2      active sync   /dev/sdd
+    otuslinux:        3       8       64        3      faulty   /dev/sde
+    otuslinux:        4       8       80        4      active sync   /dev/sdf
+    otuslinux: mdadm: hot removed /dev/sde from /dev/md0
+    otuslinux: mdadm: added /dev/sde
+    otuslinux: cat /proc/mdstat
+    otuslinux: Personalities : [raid6] [raid5] [raid4]
+    otuslinux: md0 : active raid6 sde[5](S) sdf[4] sdd[2] sdc[1] sdb[0]
+    otuslinux:       761856 blocks super 1.2 level 6, 512k chunk, algorithm 2 [5/4] [UUU_U]
+    otuslinux:
+    otuslinux: unused devices: <none>
+    otuslinux: mdadm -D /dev/md0
+    otuslinux: /dev/md0:
+    otuslinux:            Version : 1.2
+    otuslinux:      Creation Time : Sun May 23 10:56:28 2021
+    otuslinux:         Raid Level : raid6
+    otuslinux:         Array Size : 761856 (744.00 MiB 780.14 MB)
+    otuslinux:      Used Dev Size : 253952 (248.00 MiB 260.05 MB)
+    otuslinux:       Raid Devices : 5
+    otuslinux:      Total Devices : 5
+    otuslinux:        Persistence : Superblock is persistent
+    otuslinux:
+    otuslinux:        Update Time : Sun May 23 10:56:50 2021
+    otuslinux:              State : clean, degraded, recovering
+    otuslinux:     Active Devices : 4
+    otuslinux:    Working Devices : 5
+    otuslinux:     Failed Devices : 0
+    otuslinux:      Spare Devices : 1
+    otuslinux:
+    otuslinux:             Layout : left-symmetric
+    otuslinux:         Chunk Size : 512K
+    otuslinux:
+    otuslinux: Consistency Policy : resync
+    otuslinux:
+    otuslinux:     Rebuild Status : 0% complete
+    otuslinux:
+    otuslinux:               Name : otuslinux:0  (local to host otuslinux)
+    otuslinux:               UUID : d3aa3589:8cd807b4:9cbf999a:9c0f3d64
+    otuslinux:             Events : 24
+    otuslinux:
+    otuslinux:     Number   Major   Minor   RaidDevice State
+    otuslinux:        0       8       16        0      active sync   /dev/sdb
+    otuslinux:        1       8       32        1      active sync   /dev/sdc
+    otuslinux:        2       8       48        2      active sync   /dev/sdd
+    otuslinux:        5       8       64        3      spare rebuilding   /dev/sde
+    otuslinux:        4       8       80        4      active sync   /dev/sdf
+    otuslinux: Information: You may need to update /etc/fstab.
+
+    otuslinux: Information: You may need to update /etc/fstab.
+
+    otuslinux: Information: You may need to update /etc/fstab.
+
+    otuslinux: Information: You may need to update /etc/fstab.
+
+    otuslinux: Information: You may need to update /etc/fstab.
+
+    otuslinux: mke2fs 1.42.9 (28-Dec-2013)
+    otuslinux: Filesystem label=
+    otuslinux: OS type: Linux
+    otuslinux: Block size=1024 (log=0)
+    otuslinux: Fragment size=1024 (log=0)
+    otuslinux: Stride=512 blocks, Stripe width=1536 blocks
+    otuslinux: 37696 inodes, 150528 blocks
+    otuslinux: 7526 blocks (5.00%) reserved for the super user
+    otuslinux: First data block=1
+    otuslinux: Maximum filesystem blocks=33816576
+    otuslinux: 19 block groups
+    otuslinux: 8192 blocks per group, 8192 fragments per group
+    otuslinux: 1984 inodes per group
+    otuslinux: Superblock backups stored on blocks:
+    otuslinux:  8193, 24577, 40961, 57345, 73729
+    otuslinux:
+    otuslinux: Allocating group tables: done
+    otuslinux: Writing inode tables: done
+    otuslinux: Creating journal (4096 blocks):
+    otuslinux: done
+    otuslinux: Writing superblocks and filesystem accounting information:
+    otuslinux:  0/19
+    otuslinux:
+    otuslinux: done
+    otuslinux: mke2fs 1.42.9 (28-Dec-2013)
+    otuslinux: Filesystem label=
+    otuslinux: OS type: Linux
+    otuslinux: Block size=1024 (log=0)
+    otuslinux: Fragment size=1024 (log=0)
+    otuslinux: Stride=512 blocks, Stripe width=1536 blocks
+    otuslinux: 38152 inodes, 152064 blocks
+    otuslinux: 7603 blocks (5.00%) reserved for the super user
+    otuslinux: First data block=1
+    otuslinux: Maximum filesystem blocks=33816576
+    otuslinux: 19 block groups
+    otuslinux: 8192 blocks per group, 8192 fragments per group
+    otuslinux: 2008 inodes per group
+    otuslinux: Superblock backups stored on blocks:
+    otuslinux:  8193, 24577, 40961, 57345, 73729
+    otuslinux:
+    otuslinux: Allocating group tables: done
+    otuslinux: Writing inode tables: done
+    otuslinux: Creating journal (4096 blocks):
+    otuslinux: done
+    otuslinux: Writing superblocks and filesystem accounting information:
+    otuslinux:  0/19
+    otuslinux:
+    otuslinux: done
+    otuslinux: mke2fs 1.42.9 (28-Dec-2013)
+    otuslinux: Filesystem label=
+    otuslinux: OS type: Linux
+    otuslinux: Block size=1024 (log=0)
+    otuslinux: Fragment size=1024 (log=0)
+    otuslinux: Stride=512 blocks, Stripe width=1536 blocks
+    otuslinux: 38456 inodes, 153600 blocks
+    otuslinux: 7680 blocks (5.00%) reserved for the super user
+    otuslinux: First data block=1
+    otuslinux: Maximum filesystem blocks=33816576
+    otuslinux: 19 block groups
+    otuslinux: 8192 blocks per group, 8192 fragments per group
+    otuslinux: 2024 inodes per group
+    otuslinux: Superblock backups stored on blocks:
+    otuslinux:  8193, 24577, 40961, 57345, 73729
+    otuslinux:
+    otuslinux: Allocating group tables: done
+    otuslinux: Writing inode tables: done
+    otuslinux: Creating journal (4096 blocks):
+    otuslinux: done
+    otuslinux: Writing superblocks and filesystem accounting information:
+    otuslinux:  0/19
+    otuslinux:
+    otuslinux: done
+    otuslinux: mke2fs 1.42.9 (28-Dec-2013)
+    otuslinux: Filesystem label=
+    otuslinux: OS type: Linux
+    otuslinux: Block size=1024 (log=0)
+    otuslinux: Fragment size=1024 (log=0)
+    otuslinux: Stride=512 blocks, Stripe width=1536 blocks
+    otuslinux: 38152 inodes, 152064 blocks
+    otuslinux: 7603 blocks (5.00%) reserved for the super user
+    otuslinux: First data block=1
+    otuslinux: Maximum filesystem blocks=33816576
+    otuslinux: 19 block groups
+    otuslinux: 8192 blocks per group, 8192 fragments per group
+    otuslinux: 2008 inodes per group
+    otuslinux: Superblock backups stored on blocks:
+    otuslinux:  8193, 24577, 40961, 57345, 73729
+    otuslinux:
+    otuslinux: Allocating group tables: done
+    otuslinux: Writing inode tables: done
+    otuslinux: Creating journal (4096 blocks):
+    otuslinux: done
+    otuslinux: Writing superblocks and filesystem accounting information:
+    otuslinux:  0/19
+    otuslinux:
+    otuslinux: done
+    otuslinux: mke2fs 1.42.9 (28-Dec-2013)
+    otuslinux: Filesystem label=
+    otuslinux: OS type: Linux
+    otuslinux: Block size=1024 (log=0)
+    otuslinux: Fragment size=1024 (log=0)
+    otuslinux: Stride=512 blocks, Stripe width=1536 blocks
+    otuslinux: 37696 inodes, 150528 blocks
+    otuslinux: 7526 blocks (5.00%) reserved for the super user
+    otuslinux: First data block=1
+    otuslinux: Maximum filesystem blocks=33816576
+    otuslinux: 19 block groups
+    otuslinux: 8192 blocks per group, 8192 fragments per group
+    otuslinux: 1984 inodes per group
+    otuslinux: Superblock backups stored on blocks:
+    otuslinux:  8193, 24577, 40961, 57345, 73729
+    otuslinux:
+    otuslinux: Allocating group tables: done
+    otuslinux: Writing inode tables: done
+    otuslinux: Creating journal (4096 blocks):
+    otuslinux: done
+    otuslinux: Writing superblocks and filesystem accounting information:
+    otuslinux:  0/19
+    otuslinux:
+    otuslinux: done
+    otuslinux: show mounted raid parts
+    otuslinux: /dev/md0p1 on /raid/part1 type ext4 (rw,relatime,seclabel,stripe=1536,data=ordered)
+    otuslinux: /dev/md0p2 on /raid/part2 type ext4 (rw,relatime,seclabel,stripe=1536,data=ordered)
+    otuslinux: /dev/md0p3 on /raid/part3 type ext4 (rw,relatime,seclabel,stripe=1536,data=ordered)
+    otuslinux: /dev/md0p4 on /raid/part4 type ext4 (rw,relatime,seclabel,stripe=1536,data=ordered)
+    otuslinux: /dev/md0p5 on /raid/part5 type ext4 (rw,relatime,seclabel,stripe=1536,data=ordered)
+root@otssTestServer:/home/lx/git/otus-linux# vagrant ssh
+[vagrant@otuslinux ~]$ sudo -i
+[root@otuslinux ~]# mdadm -D /dev/
+Display all 157 possibilities? (y or n)
+[root@otuslinux ~]# mdadm -D /dev/md0
+/dev/md0:
+           Version : 1.2
+     Creation Time : Sun May 23 10:56:28 2021
+        Raid Level : raid6
+        Array Size : 761856 (744.00 MiB 780.14 MB)
+     Used Dev Size : 253952 (248.00 MiB 260.05 MB)
+      Raid Devices : 5
+     Total Devices : 5
+       Persistence : Superblock is persistent
+
+       Update Time : Sun May 23 10:57:54 2021
+             State : clean
+    Active Devices : 5
+   Working Devices : 5
+    Failed Devices : 0
+     Spare Devices : 0
+
+            Layout : left-symmetric
+        Chunk Size : 512K
+
+Consistency Policy : resync
+
+              Name : otuslinux:0  (local to host otuslinux)
+              UUID : d3aa3589:8cd807b4:9cbf999a:9c0f3d64
+            Events : 55
+
+    Number   Major   Minor   RaidDevice State
+       0       8        0        0      active sync   /dev/sda
+       1       8       16        1      active sync   /dev/sdb
+       2       8       32        2      active sync   /dev/sdc
+       5       8       48        3      active sync   /dev/sdd
+       4       8       64        4      active sync   /dev/sde
+[root@otuslinux ~]# mount | grep -F '/raid/part'
+/dev/md0p2 on /raid/part2 type ext4 (rw,relatime,seclabel,stripe=1536,data=ordered)
+/dev/md0p1 on /raid/part1 type ext4 (rw,relatime,seclabel,stripe=1536,data=ordered)
+/dev/md0p5 on /raid/part5 type ext4 (rw,relatime,seclabel,stripe=1536,data=ordered)
+/dev/md0p3 on /raid/part3 type ext4 (rw,relatime,seclabel,stripe=1536,data=ordered)
+/dev/md0p4 on /raid/part4 type ext4 (rw,relatime,seclabel,stripe=1536,data=ordered)

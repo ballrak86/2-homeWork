@@ -1,0 +1,4 @@
+vagrant up
+  sudo -i
+  mdadm -D /dev/md0
+  mount | grep -F '/raid/part'
